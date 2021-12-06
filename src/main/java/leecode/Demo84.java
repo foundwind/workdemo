@@ -39,6 +39,7 @@ public class Demo84 {
 
     private boolean dfs(int[] heights, int len) {
         boolean isExChange = false;
+
         int lastHigh = 0;
         int maxHeight = 0;
         for (int i = 0; i < len; i++) {
