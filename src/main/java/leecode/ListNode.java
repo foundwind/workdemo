@@ -1,7 +1,9 @@
 package leecode;
 
 
-public class ListNode {
+import java.io.Serializable;
+
+public class ListNode implements Serializable {
     int val;
     ListNode next;
 
