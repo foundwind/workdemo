@@ -53,30 +53,13 @@ public class PriceShopNoModify {
     private static Map<String, String> getMap() {
         Map<String, String> map = new HashMap<>();
 
-        map.put("A52L", "A4Y2");
-        map.put("A58S", "A5Y1");
-        map.put("A64R", "A5Y2");
-        map.put("A570", "A5Y6");
-        map.put("A00D", "A5Y9");
-        map.put("A00L", "A6Y0");
-        map.put("A64J", "A6Y1");
-        map.put("A53Y", "A6Y2");
-        map.put("A05S", "A6Y4");
-        map.put("A156", "A6Y6");
-        map.put("A009", "A6Y7");
-        map.put("A14D", "A6Y8");
-        map.put("A09L", "A6Y9");
-        map.put("A591", "A7Y2");
-        map.put("A561", "A7Y3");
-        map.put("A36F", "A7Y6");
-        map.put("A00S", "A7Y7");
-        map.put("A46X", "A7Y8");
-        map.put("A00Q", "A7Y9");
-        map.put("A41E", "A8Y0");
-        map.put("A275", "A8Y1");
-        map.put("A478", "A8Y3");
-        map.put("A002", "A8Y4");
-        map.put("A0O1", "A8Y7");
+        map.put("A57A", "A8Y9");
+        map.put("A16N", "A9Y4");
+        map.put("A255", "A9Y5");
+        map.put("A15P", "A9Y6");
+        map.put("A11D", "A9Y7");
+        map.put("A05C", "A9Y8");
+
 
         return map;
     }
