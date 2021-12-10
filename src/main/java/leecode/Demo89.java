@@ -48,7 +48,6 @@ public class Demo89 {
         // 首位
         int head = 1;
         for (int i = 0; i < n; i++) {
-
             for (int j = res.size() - 1; j >= 0; j--) {
                 res.add(head + res.get(j));
             }
