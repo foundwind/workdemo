@@ -11,16 +11,25 @@ public class Demo91 {
     int count = 0;
 
     public int numDecodings(String s) {
-        dfs(s.toCharArray(), 0, s.length());
-        return count;
+        int len = s.length();
+        if (len == 0) return 0;
+        // 0-n,有多少种解码方式
+        int[] dd = new int[len + 1];
+        // 填充最后一个
+        char c = s.charAt(len - 1);
+        if (c == '0'){
+
+        }
+
+
+
+
+        // 从最后走到头
+        for (int i = len - 1; i > -1; i++) {
+
+        }
+
+
+        return dd[0];
     }
-
-    private void dfs(char[] chars, int start, int len) {
-
-
-
-
-    }
-
-
 }
