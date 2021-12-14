@@ -10,6 +10,6 @@ public class Demo93 {
 
 
     public List<String> restoreIpAddresses(String s) {
-
+        return null;
     }
 }
