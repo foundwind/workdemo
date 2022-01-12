@@ -9,6 +9,16 @@ package skiplist;
  */
 public class SkipList {
 
+  public static void main(String[] args) {
+    SkipList skipList = new SkipList();
+    skipList.insert(3);
+    skipList.insert(1);
+    skipList.insert(1);
+    skipList.insert(6);
+    skipList.insert(13);
+    skipList.find(20);
+  }
+
   private static final float SKIPLIST_P = 0.5f;
   private static final int MAX_LEVEL = 16;
 
@@ -18,12 +28,15 @@ public class SkipList {
 
   public Node find(int value) {
     Node p = head;
+    // 找出头结点，和他的儿子结点
     for (int i = levelCount - 1; i >= 0; --i) {
+      // 找到第一个结点，如果大于结果，就在此范围内
       while (p.forwards[i] != null && p.forwards[i].data < value) {
         p = p.forwards[i];
       }
     }
 
+    //
     if (p.forwards[0] != null && p.forwards[0].data == value) {
       return p.forwards[0];
     } else {
@@ -106,6 +119,7 @@ public class SkipList {
     }
     System.out.println();
   }
+
 
   public class Node {
     private int data = -1;

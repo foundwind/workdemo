@@ -52,15 +52,27 @@ public class PriceShopNoModify {
 
     private static Map<String, String> getMap() {
         Map<String, String> map = new HashMap<>();
-
-        map.put("A57A", "A8Y9");
-        map.put("A16N", "A9Y4");
-        map.put("A255", "A9Y5");
-        map.put("A15P", "A9Y6");
-        map.put("A11D", "A9Y7");
-        map.put("A05C", "A9Y8");
-
-
+        map.put("A12G", "A7Y1");
+        map.put("A055", "A7Y4");
+        map.put("A128", "A8Y2");
+        map.put("A173", "A8Y5");
+        map.put("A18D", "A8Y6");
+        map.put("A476", "A4YR");
+        map.put("A12D", "A4YU");
+        map.put("A003", "A4YV");
+        map.put("A02U", "A4YW");
+        map.put("A03Y", "A4YX");
+        map.put("A04F", "A4YY");
+        map.put("A04K", "A4YZ");
+        map.put("A08A", "A5YB");
+        map.put("A08V", "A5YC");
+        map.put("A105", "A5YD");
+        map.put("A144", "A5YE");
+        map.put("A160", "A5YF");
+        map.put("A3A3", "A55D");
+        map.put("A3A5", "A03T");
+        map.put("A17T", "A5YI");
+        map.put("A005", "A5YJ");
         return map;
     }
 }

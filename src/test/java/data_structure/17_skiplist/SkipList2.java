@@ -1,5 +1,7 @@
 package com.study.skiplist;
 
+import skiplist.SkipList;
+
 import java.util.Random;
 
 /**
@@ -255,6 +257,19 @@ public class SkipList2 {
     }
 
     public static void main(String[] args) {
+        SkipList skipList = new SkipList();
+        skipList.insert(1);
+        skipList.insert(2);
+        skipList.insert(3);
+        skipList.insert(4);
+        skipList.insert(6);
+        skipList.insert(8);
+        skipList.insert(7);
+        skipList.insert(3);
+        skipList.printAll();
+        System.out.println(1);
+
+
         SkipList2 list = new SkipList2();
         list.insert(1, 3);
         list.insert(2, 3);
