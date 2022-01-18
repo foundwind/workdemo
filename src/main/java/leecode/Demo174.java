@@ -49,10 +49,11 @@ public class Demo174 {
         for (int i = 1; i < yLen; i++) {
             for (int j = 1; j < xLen; j++) {
                 // 判断哪边消耗更少，就选取哪边
+                if (dungeon[0][i] != 0) {
 
+                } else { // 不需要扣血
 
-
-
+                }
 
             }
 
