@@ -1,7 +1,52 @@
 import java.util.Random;
 
-class Solution {
+public class Demo215 extends ClassLoader{
     Random random = new Random();
+
+
+
+
+
+    Integer check = null;
+    private Demo215 ff = null;
+
+    public Demo215() {
+        check = 1;
+    }
+
+    public Demo215 getFf() {
+        return ff;
+    }
+
+    public void setFf(Demo215 ff) {
+        this.ff = ff;
+    }
+
+    public static void main(String[] args) {
+        Demo215 test = new Demo215();
+        new Thread(() -> {
+            init(test);
+            while (true) {
+                if (test.getFf() != null) {
+                    if (test.ff.check == 0) {
+                        System.out.println("你好");
+                        break;
+                    } else {
+                        System.out.println("1");
+                        break;
+                    }
+                }
+            }
+        }).start();
+
+    }
+
+    private static void init(Demo215 test) {
+        new Thread(() -> {
+            test.setFf(new Demo215());
+        }).start();
+        ;
+    }
 
     public int findKthLargest(int[] nums, int k) {
         return quickSelect(nums, 0, nums.length - 1, nums.length - k);

@@ -160,5 +160,10 @@
             <version>2.11.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.xiaoju.uemc.tinyid</groupId>
+            <artifactId>tinyid-client</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
 </project>
