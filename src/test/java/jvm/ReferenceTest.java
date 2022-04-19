@@ -1,17 +1,23 @@
+package jvm;
+
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Test {
-
+/**
+ * @author XuYiPeng
+ * @Description 虚引用测试
+ * @date 2022/4/2
+ */
+public class ReferenceTest {
     private static final List<Object> TEST_DATA = new LinkedList<>();
-    private static final ReferenceQueue<TestClass> QUEUE = new ReferenceQueue<>();
+    private static final ReferenceQueue<ReferenceTest.TestClass> QUEUE = new ReferenceQueue<>();
 
     public static void main(String[] args) throws InterruptedException {
-        TestClass obj = new TestClass("Test");
-        PhantomReference<TestClass> phantomReference = new PhantomReference<>(obj, QUEUE);
+        ReferenceTest.TestClass obj = new ReferenceTest.TestClass("Test");
+        PhantomReference<ReferenceTest.TestClass> phantomReference = new PhantomReference<>(obj, QUEUE);
 
         // 该线程不断读取这个虚引用，并不断往列表里插入数据，以促使系统早点进行GC
         new Thread(() -> {
@@ -30,7 +36,7 @@ public class Test {
         // 这个线程不断读取引用队列，当弱引用指向的对象呗回收时，该引用就会被加入到引用队列中
         new Thread(() -> {
             while (true) {
-                Reference<? extends TestClass> poll = QUEUE.poll();
+                Reference<? extends ReferenceTest.TestClass> poll = QUEUE.poll();
                 if (poll != null) {
                     System.out.println("--- 虚引用对象被jvm回收了 ---- " + poll);
                     System.out.println("--- 回收对象 ---- " + poll.get());
