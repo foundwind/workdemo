@@ -1,5 +1,8 @@
 package 设计模式.观察者模式;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -15,7 +18,9 @@ public class CurrentDisplay implements Observer {
         System.out.println(weatherData.getTemp());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("C:\\Users\\QDM\\Desktop\\学习文档.xlsx");
+        FileInputStream fileInputStream = new FileInputStream(file);
         WeatherData data = new WeatherData();
         data.addObserver(new CurrentDisplay());
 
