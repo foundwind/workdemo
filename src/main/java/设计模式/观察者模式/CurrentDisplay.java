@@ -19,8 +19,6 @@ public class CurrentDisplay implements Observer {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("C:\\Users\\QDM\\Desktop\\学习文档.xlsx");
-        FileInputStream fileInputStream = new FileInputStream(file);
         WeatherData data = new WeatherData();
         data.addObserver(new CurrentDisplay());
 
